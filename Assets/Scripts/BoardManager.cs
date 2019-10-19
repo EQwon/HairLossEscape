@@ -9,9 +9,13 @@ public class BoardManager : MonoBehaviour
     [Tooltip("초당 충전되는 에너지")]
     [SerializeField] private float chargeSpeed = 5f;
 
+    private List<GameObject> hairs = new List<GameObject>();
+    private int initialHair;
+
     public static BoardManager instance;
     public float MyEnergy { get { return myEnergy; } }
     public float NowTime { get { return nowTime; } }
+    public int nowHair { get { return hairs.Count; } }
 
     private float nowTime = 60f;
 
@@ -24,6 +28,14 @@ public class BoardManager : MonoBehaviour
     private void Start()
     {
         myEnergy = 0;
+
+        GameObject[] objects = GameObject.FindGameObjectsWithTag("Hair");
+        for (int i = 0; i < objects.Length; i++)
+        {
+            hairs.Add(objects[i]);
+        }
+
+        initialHair = hairs.Count;
     }
 
     private void FixedUpdate()
@@ -43,6 +55,11 @@ public class BoardManager : MonoBehaviour
 
             UIManager.instance.Lose();
         }
+
+        if (nowHair == 0)
+        {
+            UIManager.instance.Win();
+        }
     }
 
     public void UseEnergy(int energy)
@@ -53,5 +70,10 @@ public class BoardManager : MonoBehaviour
     public void ReturnEnergy(int amount)
     {
         myEnergy += amount;
+    }
+
+    public void HairDie(GameObject hair)
+    {
+        hairs.Remove(hair);
     }
 }

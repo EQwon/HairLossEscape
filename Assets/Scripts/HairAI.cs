@@ -61,6 +61,7 @@ public class HairAI : MonoBehaviour
         if (nowHealth <= 0)
         {
             Debug.Log(name + "죽었습니다.");
+            BoardManager.instance.HairDie(gameObject);
             Destroy(gameObject);
         }
     }
