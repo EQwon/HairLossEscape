@@ -47,5 +47,6 @@ public class UIManager : MonoBehaviour
     public void StageSelect()
     {
         SceneManager.LoadScene(1);
+        Time.timeScale = 1;
     }
 }
