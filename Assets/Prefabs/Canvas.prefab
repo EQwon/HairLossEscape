@@ -2046,6 +2046,13 @@ MonoBehaviour:
   energySlider: {fileID: 6099664670492673420}
   energyText: {fileID: 6099664670154073771}
   remainTime: {fileID: 6099664670195473180}
+  miniMapImages:
+  - {fileID: 21300000, guid: 59fe9be7659a14b4ba7e976d5e12659f, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  miniMap: {fileID: 7718169726143093018}
 --- !u!1 &6099664671324494101
 GameObject:
   m_ObjectHideFlags: 0
