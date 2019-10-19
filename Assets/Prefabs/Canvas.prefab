@@ -78,7 +78,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uBBF8\uC138\uBA3C\uC9C0 (20 Cost)\nHP : 10 / \uACF5\uACA9\uB825 : 3 /
+  m_Text: "\uBBF8\uC138\uBA3C\uC9C0 (10 Cost)\nHP : 10 / \uACF5\uACA9\uB825 : 4 /
     \uC18D\uB3C4 : 1.5"
 --- !u!1 &1514625894994842208
 GameObject:
@@ -145,7 +145,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 59fe9be7659a14b4ba7e976d5e12659f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2b031fb59bc782842ab1f0cd04818de7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -329,7 +329,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uC0B0\uC131\uBE44 (30 Cost)\nHP : 20 / \uACF5\uACA9\uB825 : 5 / \uC18D\uB3C4
+  m_Text: "\uC0B0\uC131\uBE44 (20 Cost)\nHP : 20 / \uACF5\uACA9\uB825 : 5 / \uC18D\uB3C4
     : 2"
 --- !u!1 &3650890962302308714
 GameObject:
@@ -409,7 +409,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uC2A4\uD2B8\uB808\uC2A4 (40 Cost)\nHP : 15 / \uACF5\uACA9\uB825 : 4 /
+  m_Text: "\uC2A4\uD2B8\uB808\uC2A4 (30 Cost)\nHP : 15 / \uACF5\uACA9\uB825 : 7 /
     \uC18D\uB3C4 : 2"
 --- !u!1 &3926343069977704213
 GameObject:
@@ -2047,11 +2047,11 @@ MonoBehaviour:
   energyText: {fileID: 6099664670154073771}
   remainTime: {fileID: 6099664670195473180}
   miniMapImages:
-  - {fileID: 21300000, guid: 59fe9be7659a14b4ba7e976d5e12659f, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 2b031fb59bc782842ab1f0cd04818de7, type: 3}
+  - {fileID: 21300000, guid: 1fa7a5ef8fd7d1344870f056739868dc, type: 3}
+  - {fileID: 21300000, guid: ba147d014056728478ef6d8d6018fbe7, type: 3}
+  - {fileID: 21300000, guid: af330830367a8634d88609b9f9051018, type: 3}
+  - {fileID: 21300000, guid: f15ba9acb8fb9b04da687a35fba272db, type: 3}
   miniMap: {fileID: 7718169726143093018}
 --- !u!1 &6099664671324494101
 GameObject:
@@ -2219,8 +2219,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uD0C8\uBAA8\uADE0 (10 Cost)\nHP : 5 / \uACF5\uACA9\uB825 : 2 / \uC18D\uB3C4
-    : 1"
+  m_Text: "\uD0C8\uBAA8\uADE0 (5 Cost)\nHP : 5 / \uACF5\uACA9\uB825 : 3 / \uC18D\uB3C4
+    : 1.5"
 --- !u!1 &8735329711226354030
 GameObject:
   m_ObjectHideFlags: 0
