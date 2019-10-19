@@ -147,7 +147,7 @@ MonoBehaviour:
   maxHealth: 15
   nowHealth: 0
   point: 25
-  value: 75
+  value: 3
 --- !u!114 &725902972268202920
 MonoBehaviour:
   m_ObjectHideFlags: 0
