@@ -22,12 +22,11 @@ public class MonsterMove : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D coll)
+    private void OnTriggerExit2D(Collider2D coll)
     {
         if (coll.tag == "End")
         {
             Destroy(gameObject);
-            BoardManager.instance.ReturnEnergy(GetComponent<MonsterAI>().Cost);
         }
     }
 }
