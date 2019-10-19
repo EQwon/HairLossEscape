@@ -32,6 +32,7 @@ public class MonsterArrange : MonoBehaviour
 
             transform.position = targetPosition.transform.position;
             mover.enabled = true;
+            mover.SetDir = targetPosition.GetComponent<LaneDirection>().Dir();
             GetComponent<BoxCollider2D>().enabled = true;
             this.enabled = false;
         }

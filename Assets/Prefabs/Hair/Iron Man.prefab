@@ -146,7 +146,7 @@ MonoBehaviour:
   state: 0
   maxHealth: 15
   nowHealth: 0
-  point: 20
+  point: 25
   value: 75
 --- !u!114 &725902972268202920
 MonoBehaviour:

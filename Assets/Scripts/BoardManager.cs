@@ -64,15 +64,13 @@ public class BoardManager : MonoBehaviour
     {
         for (int i = 0; i < lanes.Count; i++)
         {
-            float x = -2.5f + i;
-
             for(int j = 0; j < lanes[i].hair.Count; j++)
             {
                 if (lanes[i].hair[j] == null) continue;
 
                 GameObject target = lanes[i].hair[j];
-                float y = 5 - j;
-                Instantiate(target, new Vector2(x, y), Quaternion.identity, transform);
+
+                lanes[i].hair[j] = Instantiate(target, SpawnPos(i, j), Quaternion.identity, transform);
             }
         }
     }
@@ -125,7 +123,7 @@ public class BoardManager : MonoBehaviour
 
     private Vector2 SpawnPos(int x, int y)
     {
-        return new Vector2(-2.5f + x, 5 - y);
+        return new Vector2(-2.5f + x, 3 - y) - Dir(x) * y / 2;
     }
 
     private int? SpawnLanePos(int laneNum)
@@ -156,6 +154,27 @@ public class BoardManager : MonoBehaviour
         if (myPoint >= 100)
         {
             Debug.LogError("게임 승리!");
+        }
+    }
+
+    private Vector2 Dir(int laneNum)
+    {
+        switch (laneNum)
+        {
+            case 0:
+                return (new Vector2(1.5f, 6f)).normalized;
+            case 1:
+                return (new Vector2(0.9f, 6f)).normalized;
+            case 2:
+                return (new Vector2(0.3f, 6f)).normalized;
+            case 3:
+                return (new Vector2(-0.3f, 6f)).normalized;
+            case 4:
+                return (new Vector2(-0.9f, 6f)).normalized;
+            case 5:
+                return (new Vector2(-1.5f, 6f)).normalized;
+            default:
+                return Vector2.zero;
         }
     }
 }

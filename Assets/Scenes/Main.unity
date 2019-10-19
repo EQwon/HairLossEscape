@@ -259,10 +259,10 @@ MonoBehaviour:
   lanes:
   - hair:
     - {fileID: 4145295050719798895, guid: 281e4572240078a418a3bab2893c1831, type: 3}
-    - {fileID: 4145295050719798895, guid: e5684b245490bcc4593465824ba0314d, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
+  - hair:
     - {fileID: 4145295050719798895, guid: 281e4572240078a418a3bab2893c1831, type: 3}
-  - hair:
-    - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
   - hair:
@@ -270,7 +270,7 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
   - hair:
-    - {fileID: 0}
+    - {fileID: 4145295050719798895, guid: e5684b245490bcc4593465824ba0314d, type: 3}
     - {fileID: 0}
     - {fileID: 0}
   - hair:
@@ -289,7 +289,7 @@ MonoBehaviour:
   myEnergy: 0
   chargeSpeed: 5
   myPoint: 0
-  spawnSpeed: 3
+  spawnSpeed: 10
 --- !u!114 &89774832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,8 +315,9 @@ GameObject:
   - component: {fileID: 135868338}
   - component: {fileID: 135868339}
   - component: {fileID: 135868337}
+  - component: {fileID: 135868340}
   m_Layer: 8
-  m_Name: Lane 1
+  m_Name: Lane 0
   m_TagString: Arrange Position
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -356,7 +357,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 135868336}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.5, y: -5, z: 0}
+  m_LocalPosition: {x: -4, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 183014369}
@@ -411,6 +412,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &135868340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135868336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10d6e4cd076f093488069a11b68dc60a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laneNum: 0
 --- !u!1 &165484609
 GameObject:
   m_ObjectHideFlags: 0
@@ -834,7 +848,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1065,8 +1079,9 @@ GameObject:
   - component: {fileID: 909206773}
   - component: {fileID: 909206772}
   - component: {fileID: 909206771}
+  - component: {fileID: 909206774}
   m_Layer: 8
-  m_Name: Lane 4
+  m_Name: Lane 3
   m_TagString: Arrange Position
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1155,12 +1170,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 909206770}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: -5, z: 0}
+  m_LocalPosition: {x: 0.8, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 183014369}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &909206774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909206770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10d6e4cd076f093488069a11b68dc60a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laneNum: 3
 --- !u!1 &911592704
 GameObject:
   m_ObjectHideFlags: 0
@@ -1482,7 +1510,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1063315479}
   - component: {fileID: 1063315481}
-  - component: {fileID: 1063315480}
   m_Layer: 5
   m_Name: Right UI
   m_TagString: Untagged
@@ -1504,43 +1531,13 @@ RectTransform:
   - {fileID: 1063235354}
   - {fileID: 39391449}
   m_Father: {fileID: 1686782501}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -240, y: 0}
   m_SizeDelta: {x: 480, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1063315480
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1063315478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.74509805, g: 0.7500368, b: 0.94509804, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1063315481
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1560,8 +1557,9 @@ GameObject:
   - component: {fileID: 1112403199}
   - component: {fileID: 1112403198}
   - component: {fileID: 1112403197}
+  - component: {fileID: 1112403200}
   m_Layer: 8
-  m_Name: Lane 2
+  m_Name: Lane 1
   m_TagString: Arrange Position
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1650,12 +1648,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1112403196}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.5, y: -5, z: 0}
+  m_LocalPosition: {x: -2.4, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 183014369}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1112403200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112403196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10d6e4cd076f093488069a11b68dc60a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laneNum: 1
 --- !u!1 &1130490927
 GameObject:
   m_ObjectHideFlags: 0
@@ -1667,8 +1678,9 @@ GameObject:
   - component: {fileID: 1130490930}
   - component: {fileID: 1130490929}
   - component: {fileID: 1130490928}
+  - component: {fileID: 1130490931}
   m_Layer: 8
-  m_Name: Lane 5
+  m_Name: Lane 4
   m_TagString: Arrange Position
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1757,12 +1769,100 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1130490927}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.5, y: -5, z: 0}
+  m_LocalPosition: {x: 2.4, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 183014369}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1130490931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130490927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10d6e4cd076f093488069a11b68dc60a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laneNum: 4
+--- !u!1 &1152346051
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1152346052}
+  - component: {fileID: 1152346054}
+  - component: {fileID: 1152346053}
+  m_Layer: 5
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1152346052
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152346051}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1686782501}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1920, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1152346053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152346051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 96f101a1e1e894e47b96229c63f8f47e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1152346054
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152346051}
+  m_CullTransparentMesh: 0
 --- !u!1 &1166355176
 GameObject:
   m_ObjectHideFlags: 0
@@ -1849,8 +1949,9 @@ GameObject:
   - component: {fileID: 1259664528}
   - component: {fileID: 1259664530}
   - component: {fileID: 1259664529}
+  - component: {fileID: 1259664531}
   m_Layer: 8
-  m_Name: Lane 6
+  m_Name: Lane 5
   m_TagString: Arrange Position
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1864,7 +1965,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1259664527}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.5, y: -5, z: 0}
+  m_LocalPosition: {x: 4, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 183014369}
@@ -1945,6 +2046,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1259664531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259664527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10d6e4cd076f093488069a11b68dc60a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laneNum: 5
 --- !u!1 &1292625222
 GameObject:
   m_ObjectHideFlags: 0
@@ -2106,8 +2220,9 @@ GameObject:
   - component: {fileID: 1393362311}
   - component: {fileID: 1393362310}
   - component: {fileID: 1393362309}
+  - component: {fileID: 1393362312}
   m_Layer: 8
-  m_Name: Lane 3
+  m_Name: Lane 2
   m_TagString: Arrange Position
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2196,12 +2311,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1393362308}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.5, y: -5, z: 0}
+  m_LocalPosition: {x: -0.8, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 183014369}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1393362312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393362308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10d6e4cd076f093488069a11b68dc60a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laneNum: 2
 --- !u!1 &1418539299
 GameObject:
   m_ObjectHideFlags: 0
@@ -2490,7 +2618,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 2060438881
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &1686782501
@@ -2504,6 +2632,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 1152346052}
   - {fileID: 1718726078}
   - {fileID: 1063315479}
   m_Father: {fileID: 0}
@@ -2524,7 +2653,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1718726078}
   - component: {fileID: 1718726080}
-  - component: {fileID: 1718726079}
   m_Layer: 5
   m_Name: Left UI
   m_TagString: Untagged
@@ -2550,43 +2678,13 @@ RectTransform:
   - {fileID: 548590082}
   - {fileID: 1418539301}
   m_Father: {fileID: 1686782501}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 240, y: 0}
-  m_SizeDelta: {x: 480, y: 0}
+  m_AnchoredPosition: {x: 215, y: 0}
+  m_SizeDelta: {x: 430, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1718726079
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1718726077}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.9433962, g: 0.743147, b: 0.743147, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1718726080
 CanvasRenderer:
   m_ObjectHideFlags: 0
