@@ -28,11 +28,8 @@ public class MonsterArrange : MonoBehaviour
         if (hit.Length > 0)
         {
             GameObject targetPosition = hit[0].transform.gameObject;
-            Debug.Log(targetPosition.name + "에 배치했습니다." + targetPosition.transform.position);
 
-            transform.position = targetPosition.transform.position;
             mover.enabled = true;
-            mover.SetDir = targetPosition.GetComponent<LaneDirection>().Dir();
             GetComponent<BoxCollider2D>().enabled = true;
             this.enabled = false;
         }
