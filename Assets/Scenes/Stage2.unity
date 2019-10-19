@@ -215,7 +215,7 @@ PrefabInstance:
     - target: {fileID: 4145295050719798867, guid: 281e4572240078a418a3bab2893c1831,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.94
+      value: -2.95
       objectReference: {fileID: 0}
     - target: {fileID: 4145295050719798867, guid: 281e4572240078a418a3bab2893c1831,
         type: 3}
@@ -566,7 +566,7 @@ PrefabInstance:
     - target: {fileID: 4145295050719798867, guid: 281e4572240078a418a3bab2893c1831,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.94
+      value: -2.85
       objectReference: {fileID: 0}
     - target: {fileID: 4145295050719798867, guid: 281e4572240078a418a3bab2893c1831,
         type: 3}
@@ -1018,7 +1018,7 @@ PrefabInstance:
     - target: {fileID: 4145295050719798867, guid: 281e4572240078a418a3bab2893c1831,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: -2.5
       objectReference: {fileID: 0}
     - target: {fileID: 4145295050719798867, guid: 281e4572240078a418a3bab2893c1831,
         type: 3}
@@ -1793,7 +1793,7 @@ PrefabInstance:
     - target: {fileID: 4145295050719798867, guid: 281e4572240078a418a3bab2893c1831,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.94
+      value: -2.64
       objectReference: {fileID: 0}
     - target: {fileID: 4145295050719798867, guid: 281e4572240078a418a3bab2893c1831,
         type: 3}
@@ -2156,26 +2156,26 @@ PrefabInstance:
     - target: {fileID: 8828918623892551422, guid: 3ea2459d1c9531e4c9384501686686e4,
         type: 3}
       propertyPath: m_Text
-      value: "\uBBF8\uC138\uBA3C\uC9C0 (20 Cost)\nHP : 10 / \uACF5\uACA9\uB825 : 4
-        / \uC18D\uB3C4 : 1.6"
+      value: "\uBBF8\uC138\uBA3C\uC9C0 (10 Cost)\nHP : 10 / \uACF5\uACA9\uB825 : 4
+        / \uC18D\uB3C4 : 1.5"
       objectReference: {fileID: 0}
     - target: {fileID: 6732150095655795045, guid: 3ea2459d1c9531e4c9384501686686e4,
         type: 3}
       propertyPath: m_Text
-      value: "\uC0B0\uC131\uBE44 (30 Cost)\nHP : 20 / \uACF5\uACA9\uB825 : 5 / \uC18D\uB3C4
+      value: "\uC0B0\uC131\uBE44 (20 Cost)\nHP : 20 / \uACF5\uACA9\uB825 : 5 / \uC18D\uB3C4
         : 2"
       objectReference: {fileID: 0}
     - target: {fileID: 371258434079768532, guid: 3ea2459d1c9531e4c9384501686686e4,
         type: 3}
       propertyPath: m_Text
-      value: "\uC2A4\uD2B8\uB808\uC2A4 (40 Cost)\nHP : 15 / \uACF5\uACA9\uB825 : 6
+      value: "\uC2A4\uD2B8\uB808\uC2A4 (30 Cost)\nHP : 15 / \uACF5\uACA9\uB825 : 7
         / \uC18D\uB3C4 : 2"
       objectReference: {fileID: 0}
     - target: {fileID: 8008424186955905664, guid: 3ea2459d1c9531e4c9384501686686e4,
         type: 3}
       propertyPath: m_Text
-      value: "\uD0C8\uBAA8\uADE0 (10 Cost)\nHP : 5 / \uACF5\uACA9\uB825 : 3 / \uC18D\uB3C4
-        : 1.3"
+      value: "\uD0C8\uBAA8\uADE0 (5 Cost)\nHP : 5 / \uACF5\uACA9\uB825 : 3 / \uC18D\uB3C4
+        : 1.5"
       objectReference: {fileID: 0}
     - target: {fileID: 3883393687676129967, guid: 3ea2459d1c9531e4c9384501686686e4,
         type: 3}
