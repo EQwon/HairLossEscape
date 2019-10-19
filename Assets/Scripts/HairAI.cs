@@ -10,18 +10,24 @@ public class HairAI : MonoBehaviour
     [SerializeField] private int maxHealth;
     [SerializeField] private int nowHealth;
     [SerializeField] private int point;
+    [SerializeField] private int value;
 
     private HairAttack attacker;
     private GameObject targetMonster = null;
+    private SpriteRenderer sr;
+
+    public int Value { get { return value; } }
 
     private void Start()
     {
         attacker = GetComponent<HairAttack>();
+        sr = GetComponent<SpriteRenderer>();
         nowHealth = maxHealth;
     }
 
     private void Update()
     {
+        sr.sortingOrder = 1000 - (int)(transform.position.y * 100);
         switch (state)
         {
             case HairState.Attack:
