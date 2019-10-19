@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private GameObject losePanel;
     [SerializeField] private Slider energySlider;
+    [SerializeField] private Text energyText;
     [SerializeField] private Text remainTime;
 
     private void Awake()
@@ -26,14 +27,15 @@ public class UIManager : MonoBehaviour
     private void FixedUpdate()
     {
         energySlider.value = BoardManager.instance.MyEnergy;
+        energyText.text = BoardManager.instance.MyEnergy.ToString("Energy : #0");
 
-        remainTime.text = BoardManager.instance.NowTime.ToString("#.00 m");
+        remainTime.text = BoardManager.instance.NowTime.ToString("00.00 m");
     }
 
     public void Lose()
     {
         Time.timeScale = 0;
-        remainTime.text = BoardManager.instance.NowTime.ToString("#.00 m");
+        remainTime.text = BoardManager.instance.NowTime.ToString("00.00 m");
 
         losePanel.SetActive(true);
     }
