@@ -22,6 +22,7 @@ public class MonsterArrange : MonoBehaviour
 
     private void OnMouseUp()
     {
+        Debug.Log("마우스 클릭!");
         GetComponent<BoxCollider2D>().enabled = false;
         RaycastHit2D[] hit = Physics2D.RaycastAll(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector3.back);
 

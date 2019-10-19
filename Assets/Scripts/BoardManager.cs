@@ -15,7 +15,7 @@ public class BoardManager : MonoBehaviour
     public static BoardManager instance;
     public float MyEnergy { get { return myEnergy; } }
     public float NowTime { get { return nowTime; } }
-    public int nowHair { get { return hairs.Count; } }
+    public float nowHair { get { return (float)hairs.Count / initialHair; } }
 
     private float nowTime = 60f;
 

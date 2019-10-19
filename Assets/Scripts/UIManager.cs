@@ -14,6 +14,10 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Text energyText;
     [SerializeField] private Text remainTime;
 
+    [Header("Mini Map")]
+    [SerializeField] private List<Sprite> miniMapImages;
+    [SerializeField] private Image miniMap;
+
     private void Awake()
     {
         if (instance == null) instance = this;
@@ -32,6 +36,8 @@ public class UIManager : MonoBehaviour
         energyText.text = BoardManager.instance.MyEnergy.ToString("Energy : #0");
 
         remainTime.text = BoardManager.instance.NowTime.ToString("00.00 m");
+
+        ChangeMiniMap();
     }
 
     public void Win()
@@ -64,5 +70,17 @@ public class UIManager : MonoBehaviour
     {
         SceneManager.LoadScene(1);
         Time.timeScale = 1;
+    }
+
+    private void ChangeMiniMap()
+    {
+        int level = miniMapImages.Count - 1;
+        float levelDelta = 1 / (float)level;
+
+        if (BoardManager.instance.nowHair > 1 - levelDelta) miniMap.sprite = miniMapImages[0];
+        else if (BoardManager.instance.nowHair > 1 - 2 * levelDelta) miniMap.sprite = miniMapImages[1];
+        else if (BoardManager.instance.nowHair > 1 - 3 * levelDelta) miniMap.sprite = miniMapImages[2];
+        else if (BoardManager.instance.nowHair > 1 - 4 * levelDelta) miniMap.sprite = miniMapImages[3];
+        else if (BoardManager.instance.nowHair > 1 - 5 * levelDelta) miniMap.sprite = miniMapImages[4];
     }
 }
