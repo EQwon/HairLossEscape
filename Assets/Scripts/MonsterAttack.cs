@@ -16,6 +16,7 @@ public class MonsterAttack : MonoBehaviour
     [SerializeField] private WeaponDelay delay;
     [SerializeField] private int damage = 10;
     [SerializeField] private bool canAttack = true;
+    [SerializeField] private GameObject attackParticle;
 
     private bool doingAttack = false;
     private GameObject myTarget;
@@ -31,7 +32,10 @@ public class MonsterAttack : MonoBehaviour
     public void DoAttack()
     {
         if (myTarget)
+        {
             myTarget.GetComponent<HairAI>().GetDamage(damage);
+            Instantiate(attackParticle, (Vector2)transform.position + new Vector2(0, 3f), Quaternion.identity);
+        }
     }
 
     public void TryAttack(GameObject target)
