@@ -26,8 +26,10 @@ public class BoardManager : MonoBehaviour
     public static BoardManager instance;
     public float MyEnergy { get { return myEnergy; } }
     public float MyPoint { get { return myPoint; } }
+    public float NowTime { get { return nowTime; } }
 
-    private float nowTime = 0;
+    private float nowTime = 60f;
+    private float spawnTime = 0;
 
     private void Awake()
     {
@@ -44,7 +46,8 @@ public class BoardManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        nowTime += Time.fixedDeltaTime;
+        spawnTime += Time.fixedDeltaTime;
+        nowTime -= Time.fixedDeltaTime;
         float target = myEnergy + chargeSpeed * Time.fixedDeltaTime;
         if (target >= maxEnergy)
         {
@@ -53,10 +56,16 @@ public class BoardManager : MonoBehaviour
 
         myEnergy = target;
 
-        if(nowTime >= spawnSpeed)
+        if(spawnTime >= spawnSpeed)
         {
             SpawnRandomHair();
+            spawnTime = 0;
+        }
+        if (nowTime <= 0)
+        {
             nowTime = 0;
+
+            Debug.LogError("패배하였습니다.");
         }
     }
 
@@ -75,43 +84,9 @@ public class BoardManager : MonoBehaviour
         }
     }
 
-    private int GetLaneValue(int laneNum)
-    {
-        Lane targetLane = lanes[laneNum];
-        int totalValue = 0;
-
-        for (int i = 0; i < targetLane.hair.Count; i++)
-        {
-            if (targetLane.hair[i])
-            {
-                totalValue += targetLane.hair[i].GetComponent<HairAI>().Value;
-            }
-        }
-
-        return totalValue;
-    }
-
-    private int GetMinimumValueLaneNum()
-    {
-        int minLaneNum = -1;
-        int minValue = 99999;
-
-        for (int i = 0; i < lanes.Count; i++)
-        {
-            int nowLaneValue = GetLaneValue(i);
-            if (minValue > nowLaneValue)
-            {
-                minValue = nowLaneValue;
-                minLaneNum = i;
-            }
-        }
-
-        return minLaneNum;
-    }
-
     private void SpawnRandomHair()
     {
-        int laneNum = GetMinimumValueLaneNum();
+        int laneNum = Random.Range(0, 6);
 
         if (SpawnLanePos(laneNum).HasValue == false) return;
 
