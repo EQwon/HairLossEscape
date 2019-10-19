@@ -2007,6 +2007,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: StageSelect
       objectReference: {fileID: 0}
+    - target: {fileID: 3787139766780064022, guid: 6d78bef9472df774a878a3819d95b2f7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2136454588}
+    - target: {fileID: 3787139766780064022, guid: 6d78bef9472df774a878a3819d95b2f7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Retry
+      objectReference: {fileID: 0}
+    - target: {fileID: 3787139768001444326, guid: 6d78bef9472df774a878a3819d95b2f7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2136454588}
+    - target: {fileID: 3787139768001444326, guid: 6d78bef9472df774a878a3819d95b2f7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StageSelect
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d78bef9472df774a878a3819d95b2f7, type: 3}
 --- !u!114 &2136454588 stripped
@@ -2033,6 +2053,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3883393687676129967, guid: 3ea2459d1c9531e4c9384501686686e4,
+        type: 3}
+      propertyPath: losePanel
+      value: 
+      objectReference: {fileID: 1444504006}
+    - target: {fileID: 3883393687676129967, guid: 3ea2459d1c9531e4c9384501686686e4,
+        type: 3}
+      propertyPath: winPanel
+      value: 
+      objectReference: {fileID: 121728558}
     - target: {fileID: 6099664671297517197, guid: 3ea2459d1c9531e4c9384501686686e4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2177,15 +2207,5 @@ PrefabInstance:
       value: "\uD0C8\uBAA8\uADE0 (5 Cost)\nHP : 5 / \uACF5\uACA9\uB825 : 3 / \uC18D\uB3C4
         : 1.5"
       objectReference: {fileID: 0}
-    - target: {fileID: 3883393687676129967, guid: 3ea2459d1c9531e4c9384501686686e4,
-        type: 3}
-      propertyPath: losePanel
-      value: 
-      objectReference: {fileID: 1444504006}
-    - target: {fileID: 3883393687676129967, guid: 3ea2459d1c9531e4c9384501686686e4,
-        type: 3}
-      propertyPath: winPanel
-      value: 
-      objectReference: {fileID: 121728558}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ea2459d1c9531e4c9384501686686e4, type: 3}
