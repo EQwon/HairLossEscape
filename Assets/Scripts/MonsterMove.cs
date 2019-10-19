@@ -26,6 +26,7 @@ public class MonsterMove : MonoBehaviour
     {
         if (coll.tag == "End")
         {
+            Destroy(gameObject);
             BoardManager.instance.ReturnEnergy(GetComponent<MonsterAI>().Cost);
         }
     }
