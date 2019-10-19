@@ -31,7 +31,7 @@ public class MonsterAttack : MonoBehaviour
     public void DoAttack()
     {
         if (myTarget)
-            myTarget.GetComponent<HairStatus>().GetDamage(damage);
+            myTarget.GetComponent<HairAI>().GetDamage(damage);
     }
 
     public void TryAttack(GameObject target)

@@ -12,11 +12,13 @@ GameObject:
   - component: {fileID: 7544787610075497483}
   - component: {fileID: 8167364679946676641}
   - component: {fileID: 7324903754805125131}
+  - component: {fileID: 2138814233421035309}
   - component: {fileID: 7544787610075497482}
+  - component: {fileID: 3136813918150764433}
   - component: {fileID: 7544787610075497526}
   m_Layer: 0
-  m_Name: Monster
-  m_TagString: Untagged
+  m_Name: Dust
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1310419039
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 20c652718e195cd40a46b687263e52dd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -130,7 +132,23 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 5
+--- !u!114 &2138814233421035309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7544787610075497485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44981a03271c5f647b77b4782252854e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 0
+  maxHealth: 10
+  nowHealth: 0
+  cost: 20
 --- !u!114 &7544787610075497482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,8 +161,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada66136e4a5fe047a939f0bd195a31a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 1.5
   canMove: 1
+--- !u!114 &3136813918150764433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7544787610075497485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5747185fe77357246bedfeb5aa6ed266, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay:
+    pre: 0
+    attack: 0
+    post: 0.5
+  damage: 3
+  canAttack: 1
 --- !u!114 &7544787610075497526
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Arrange Position
   - Hair
+  - Monster
   layers:
   - Default
   - TransparentFX
@@ -42,4 +43,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Character
+    uniqueID: 1310419039
     locked: 0

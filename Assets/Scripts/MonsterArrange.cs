@@ -37,6 +37,7 @@ public class MonsterArrange : MonoBehaviour
         }
         else
         {
+            BoardManager.instance.ReturnEnergy(GetComponent<MonsterAI>().Cost);
             Destroy(gameObject);
         }
     }
