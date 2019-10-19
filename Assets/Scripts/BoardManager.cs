@@ -9,11 +9,8 @@ public class BoardManager : MonoBehaviour
     [Tooltip("초당 충전되는 에너지")]
     [SerializeField] private float chargeSpeed = 5f;
 
-    [SerializeField] private int myPoint = 0;
-
     public static BoardManager instance;
     public float MyEnergy { get { return myEnergy; } }
-    public float MyPoint { get { return myPoint; } }
     public float NowTime { get { return nowTime; } }
 
     private float nowTime = 60f;
@@ -56,15 +53,5 @@ public class BoardManager : MonoBehaviour
     public void ReturnEnergy(int amount)
     {
         myEnergy += amount;
-    }
-
-    public void GetPoint(int amount)
-    {
-        myPoint += amount;
-
-        if (myPoint >= 100)
-        {
-            Debug.LogError("게임 승리!");
-        }
     }
 }

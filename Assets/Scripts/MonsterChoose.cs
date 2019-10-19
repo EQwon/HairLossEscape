@@ -13,7 +13,6 @@ public class MonsterChoose : MonoBehaviour
     private void Start()
     {
         GetComponent<Image>().sprite = monster.GetComponent<SpriteRenderer>().sprite;
-        GetComponent<Image>().SetNativeSize();
 
         cost = monster.GetComponent<MonsterAI>().Cost;
     }
