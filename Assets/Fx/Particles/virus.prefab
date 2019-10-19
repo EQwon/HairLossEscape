@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4299444891046112}
   - component: {fileID: 198438730283126548}
   - component: {fileID: 199255727418480404}
-  - component: {fileID: 3190078052710978221}
+  - component: {fileID: 8274440282157446304}
   m_Layer: 0
   m_Name: virus
   m_TagString: Untagged
@@ -4823,7 +4823,7 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &3190078052710978221
+--- !u!114 &8274440282157446304
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
