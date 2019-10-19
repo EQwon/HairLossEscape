@@ -148,7 +148,7 @@ MonoBehaviour:
   state: 0
   maxHealth: 5
   nowHealth: 0
-  cost: 10
+  cost: 5
 --- !u!114 &7544787610075497482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada66136e4a5fe047a939f0bd195a31a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 1.5
   canMove: 1
 --- !u!114 &3136813918150764433
 MonoBehaviour:
@@ -179,7 +179,7 @@ MonoBehaviour:
     pre: 0
     attack: 0
     post: 0.5
-  damage: 2
+  damage: 3
   canAttack: 1
 --- !u!114 &7544787610075497526
 MonoBehaviour:

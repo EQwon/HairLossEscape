@@ -148,7 +148,7 @@ MonoBehaviour:
   state: 0
   maxHealth: 15
   nowHealth: 0
-  cost: 30
+  cost: 20
 --- !u!114 &7544787610075497482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,7 +179,7 @@ MonoBehaviour:
     pre: 0
     attack: 0
     post: 0.5
-  damage: 4
+  damage: 5
   canAttack: 1
 --- !u!114 &7544787610075497526
 MonoBehaviour:
