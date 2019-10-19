@@ -21,4 +21,12 @@ public class MonsterMove : MonoBehaviour
             canMove = true;
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D coll)
+    {
+        if (coll.tag == "End")
+        {
+            BoardManager.instance.ReturnEnergy(GetComponent<MonsterAI>().Cost);
+        }
+    }
 }
