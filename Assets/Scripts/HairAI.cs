@@ -11,6 +11,7 @@ public class HairAI : MonoBehaviour
     [SerializeField] private int nowHealth;
     [SerializeField] private int point;
     [SerializeField] private int value;
+    [SerializeField] private GameObject deathEffect;
 
     private HairAttack attacker;
     private GameObject targetMonster = null;
@@ -59,6 +60,7 @@ public class HairAI : MonoBehaviour
         if (nowHealth <= 0)
         {
             Debug.Log(name + "죽었습니다.");
+            Instantiate(deathEffect, transform.position, Quaternion.identity);
             BoardManager.instance.HairDie(gameObject);
             BoardManager.instance.ReturnEnergy(value);
             Destroy(gameObject);

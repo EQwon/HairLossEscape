@@ -148,6 +148,8 @@ MonoBehaviour:
   nowHealth: 0
   point: 20
   value: 2
+  deathEffect: {fileID: 1037669882035400, guid: b555eeed4732f0e4d9a0470976cc3863,
+    type: 3}
 --- !u!114 &725902972268202920
 MonoBehaviour:
   m_ObjectHideFlags: 0
