@@ -181,7 +181,8 @@ MonoBehaviour:
     post: 0.5
   damage: 4
   canAttack: 1
-  attackParticle: {fileID: 7544787610075497485}
+  attackParticle: {fileID: 1745024952684864, guid: e6533c9bd91b9f84eb3e019da3ab0b3c,
+    type: 3}
 --- !u!114 &7544787610075497526
 MonoBehaviour:
   m_ObjectHideFlags: 0
