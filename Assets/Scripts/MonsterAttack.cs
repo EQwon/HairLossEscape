@@ -67,7 +67,7 @@ public class MonsterAttack : MonoBehaviour
     }
 }
 
-[CustomPropertyDrawer(typeof(WeaponDelay))]
+/*[CustomPropertyDrawer(typeof(WeaponDelay))]
 public class DelayDrawerUIE : PropertyDrawer
 {
     // Draw the property inside the given rect
@@ -100,4 +100,4 @@ public class DelayDrawerUIE : PropertyDrawer
 
         EditorGUI.EndProperty();
     }
-}
+}*/
