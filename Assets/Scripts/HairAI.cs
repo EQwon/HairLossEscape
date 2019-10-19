@@ -16,8 +16,6 @@ public class HairAI : MonoBehaviour
     private GameObject targetMonster = null;
     private SpriteRenderer sr;
 
-    public int Value { get { return value; } }
-
     private void Start()
     {
         attacker = GetComponent<HairAttack>();
@@ -62,6 +60,7 @@ public class HairAI : MonoBehaviour
         {
             Debug.Log(name + "죽었습니다.");
             BoardManager.instance.HairDie(gameObject);
+            BoardManager.instance.ReturnEnergy(value);
             Destroy(gameObject);
         }
     }
