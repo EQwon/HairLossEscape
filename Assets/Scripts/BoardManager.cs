@@ -41,7 +41,7 @@ public class BoardManager : MonoBehaviour
         {
             nowTime = 0;
 
-            Debug.LogError("패배하였습니다.");
+            UIManager.instance.Lose();
         }
     }
 

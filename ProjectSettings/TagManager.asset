@@ -42,7 +42,7 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: UI
+  - name: Basic UI
     uniqueID: 2060438881
     locked: 0
   - name: Default
@@ -50,4 +50,7 @@ TagManager:
     locked: 0
   - name: Character
     uniqueID: 1310419039
+    locked: 0
+  - name: Result UI
+    uniqueID: 516492549
     locked: 0

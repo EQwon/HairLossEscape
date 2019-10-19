@@ -116,7 +116,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4739975775916215114}
   - component: {fileID: 4739975775916215115}
-  - component: {fileID: 4739975775916215124}
   m_Layer: 0
   m_Name: BoardManager
   m_TagString: Untagged
@@ -156,22 +155,6 @@ MonoBehaviour:
   maxEnergy: 100
   myEnergy: 0
   chargeSpeed: 5
-  myPoint: 0
---- !u!114 &4739975775916215124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4739975775916215113}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46a3b3383bd397643abaa593bd1ae089, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  energySlider: {fileID: 0}
-  pointSlider: {fileID: 0}
-  remainTime: {fileID: 0}
 --- !u!1 &4739975776595128104
 GameObject:
   m_ObjectHideFlags: 0
