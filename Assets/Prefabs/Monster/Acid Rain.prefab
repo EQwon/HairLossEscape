@@ -146,9 +146,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
-  maxHealth: 20
+  maxHealth: 15
   nowHealth: 0
-  cost: 40
+  cost: 30
 --- !u!114 &7544787610075497482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,7 +179,7 @@ MonoBehaviour:
     pre: 0
     attack: 0
     post: 0.5
-  damage: 5
+  damage: 4
   canAttack: 1
 --- !u!114 &7544787610075497526
 MonoBehaviour:
