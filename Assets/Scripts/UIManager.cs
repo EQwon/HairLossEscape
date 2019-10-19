@@ -8,7 +8,6 @@ public class UIManager : MonoBehaviour
     public static UIManager instance;
 
     [SerializeField] private Slider energySlider;
-    [SerializeField] private Slider pointSlider;
     [SerializeField] private Text remainTime;
 
     private void Awake()
@@ -20,8 +19,7 @@ public class UIManager : MonoBehaviour
     private void FixedUpdate()
     {
         energySlider.value = BoardManager.instance.MyEnergy;
-        pointSlider.value = BoardManager.instance.MyPoint;
 
-        remainTime.text = BoardManager.instance.NowTime.ToString("#.00 초");
+        remainTime.text = BoardManager.instance.NowTime.ToString("#.00 m");
     }
 }

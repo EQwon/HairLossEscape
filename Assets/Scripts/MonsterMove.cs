@@ -10,11 +10,18 @@ public class MonsterMove : MonoBehaviour
     [SerializeField] private bool canMove = true;
 
     private Vector2 moveDir = new Vector2(0, 1);
+    private SpriteRenderer sr;
 
     public bool CanMove { set { canMove = value; } }
 
+    private void Start()
+    {
+        sr = GetComponent<SpriteRenderer>();
+    }
+
     private void FixedUpdate()
     {
+        sr.sortingOrder = 1000 - (int)(transform.position.y * 100);
         if (canMove)
         {
             transform.position += (Vector3)moveDir * speed * Time.fixedDeltaTime;
